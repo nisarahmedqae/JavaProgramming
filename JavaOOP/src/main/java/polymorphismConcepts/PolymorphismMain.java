@@ -4,12 +4,12 @@ public class PolymorphismMain {
 
     public static void main(String[] args) {
         // Create objects of Dog and Cat
-        Animal myDog = new Dog();
-        Animal myCat = new Cat();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
 
         // Call the makeSound method on both objects
-        myDog.makeSound(); // Dog barks
-        myCat.makeSound(); // Cat meows
+        dog.makeSound(); // Dog barks
+        cat.makeSound(); // Cat meows
 
         // Using an array of Animal references
         Animal[] animals = {new Dog(), new Cat(), new Animal()};
