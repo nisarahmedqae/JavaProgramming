@@ -6,11 +6,10 @@ public class LinkedListMethods {
 
     public static void main(String[] args) {
         LinkedList<String> names = new LinkedList<>(Arrays.asList("Tom", "Naveen", "Lisa"));
-
         names.add(3, "Steve");
         names.add(0, "Ram");
 
-        LinkedList<String> users = new LinkedList<String>();
+        LinkedList<String> users = new LinkedList<>();
         users.add("Peter");
         users.add("Trump");
 

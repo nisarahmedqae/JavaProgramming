@@ -9,8 +9,8 @@ public class ListMethods2 {
     public static void main(String[] args) {
         List<String> list1 = new ArrayList<>(
                 Arrays.asList("Naveen", "Tom", "Naveen", "Steve", "Lisa", "Naveen"));
-        int i = list1.lastIndexOf("Naveen");
-        System.out.println(i); //5
+        int index = list1.lastIndexOf("Naveen");
+        System.out.println(index); //5
 
         list1.remove(1);
         list1.remove("Lisa");

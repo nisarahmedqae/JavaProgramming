@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class LinkedListDescIterate {
 
     public static void main(String[] args) {
-        LinkedList<String> lang = new LinkedList<String>();
+        LinkedList<String> lang = new LinkedList<>();
         lang.add("Java"); // 0
         lang.add("Python"); // 1
         lang.add("Ruby"); // 2
