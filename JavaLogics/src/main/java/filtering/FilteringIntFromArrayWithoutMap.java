@@ -1,13 +1,14 @@
 package filtering;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FilteringIntFromArrayWithoutMap {
 
 	public static void main(String[] args) {
 
 		int[] arr = { 4, 5, 5, 5, 4, 6, 6, 0, 4, 9 };
-		ArrayList<Integer> nonRepeatingList = new ArrayList<>();
+		List<Integer> nonRepeatingList = new ArrayList<>();
 
 		for (int i = 0; i < arr.length; i++) {
 			int count = 0;

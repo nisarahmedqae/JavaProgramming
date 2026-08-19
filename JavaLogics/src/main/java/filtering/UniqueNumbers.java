@@ -1,6 +1,7 @@
 package filtering;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UniqueNumbers {
 
@@ -8,7 +9,7 @@ public class UniqueNumbers {
         // print unique numbers from the array
 
         int[] arr = {4, 5, 5, 5, 4, 6, 6, 9, 4};
-        ArrayList<Integer> arrList = new ArrayList<Integer>();
+        List<Integer> arrList = new ArrayList<Integer>();
 
         for (int i = 0; i < arr.length; i++) {
             if (!arrList.contains(arr[i])) {

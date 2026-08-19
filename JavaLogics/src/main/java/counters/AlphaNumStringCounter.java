@@ -12,8 +12,8 @@ public class AlphaNumStringCounter {
 
         for (String ele : arr) {
             char[] charArr = ele.toCharArray();
-            boolean hasDigit = false;
             boolean hasLetter = false;
+            boolean hasDigit = false;
 
             for (char ch : charArr) {
                 if (ch >= 'a' && ch <= 'z' || (ch >= 'A' && ch <= 'Z')) {

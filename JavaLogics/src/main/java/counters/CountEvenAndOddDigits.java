@@ -7,7 +7,7 @@ public class CountEvenAndOddDigits {
         int evenCount = 0;
         int oddCount = 0;
 
-        for (int ele : String.valueOf(num).toCharArray()) {
+        for (char ele : String.valueOf(num).toCharArray()) {
             int digit = ele - '0';
             if (digit % 2 == 0) {
                 evenCount++;

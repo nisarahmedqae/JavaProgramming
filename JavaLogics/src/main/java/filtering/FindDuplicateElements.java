@@ -11,8 +11,8 @@ public class FindDuplicateElements {
 		String[] arr = { "Amazon", "GCP", "Azure", "Amazon", "Ali Baba", "Sauce Labs", "Azure", "GCP", "Amazon" };
 
 		System.out.println("**********hash set**********");
-		HashSet<String> data = new HashSet<>();
-		HashSet<String> duplicateSet = new HashSet<>();
+		Set<String> data = new HashSet<>();
+		Set<String> duplicateSet = new HashSet<>();
 
 		for (String e : arr) {
 			if (!data.add(e)) {

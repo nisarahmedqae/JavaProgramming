@@ -19,8 +19,6 @@ public class PasswordStrength {
         int digitsCount = 0;
         int specialCharsCount = 0;
 
-        boolean passwordStrength;
-
         for (int i = 0; i < password.length(); i++) {
             char ch = password.charAt(i);
             if (ch >= 'A' && ch <= 'Z') {
@@ -39,6 +37,7 @@ public class PasswordStrength {
         System.out.println("Digits Count: " + digitsCount);
         System.out.println("Special Characters Count: " + specialCharsCount);
 
+        boolean passwordStrength;
         if (upperCaseCount >= 2 && lowerCaseCount >= 2 && digitsCount >= 2 && specialCharsCount == 1
                 && password.length() >= 16) {
             passwordStrength = true;
