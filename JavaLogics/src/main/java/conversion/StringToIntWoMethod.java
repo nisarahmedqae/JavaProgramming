@@ -4,7 +4,9 @@ public class StringToIntWoMethod {
 	// WAP: write a program
 	// wap to convert string to integer without using Integer.parseInt() method
 
-	public static int stringToInt(String str) {
+	public static void main(String[] args) {
+		String str = "123";
+
 		char[] ch = str.toCharArray();
 		int result = 0;
 
@@ -12,13 +14,8 @@ public class StringToIntWoMethod {
 			int digit = ch[i] - '0'; // ASCII value of the character '0'/zero i.e 48
 			result = result * 10 + digit;
 		}
-		return result;
-	}
 
-	public static void main(String[] args) {
-		String str = "123";
-		System.out.println(stringToInt(str) + 10);
-
+		System.out.println(result + 10);
 	}
 
 }
