@@ -2,6 +2,7 @@ package arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CompareArray {
 
@@ -12,7 +13,7 @@ public class CompareArray {
         int arr1[] = {1, 4, 5, 7};
         int arr2[] = {6, 4, 3, 7}; // {4,7}
 
-        ArrayList<Integer> arrList = new ArrayList<>();
+        List<Integer> arrList = new ArrayList<>();
 
         for (int i = 0; i < arr1.length; i++) {
             if (arr1[i] == arr2[i]) {

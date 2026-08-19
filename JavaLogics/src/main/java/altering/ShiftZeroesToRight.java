@@ -20,7 +20,7 @@ public class ShiftZeroesToRight {
 		// Fill the remaining elements with zeros
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] == 0) {
-				result[index++] = 0;
+				result[index++] = arr[i];
 			}
 		}
 

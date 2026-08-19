@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class CheckArraysEquals {
 
     public static void main(String[] args) {
-        int arr1[] = {1, 4, 5, 7};
-        int arr2[] = {6, 4, 5, 7};
+        int[] arr1 = {1, 4, 5, 7};
+        int[] arr2 = {6, 4, 5, 7};
 
         // Approach 1
         boolean status = true;
@@ -30,7 +30,7 @@ public class CheckArraysEquals {
         // Approach 2
         boolean status2 = Arrays.equals(arr1, arr2);
 
-        if (status2 == true) {
+        if (status2) {
             System.out.println("Arrays are equal");
         } else {
             System.out.println("Arrays are not equal");
