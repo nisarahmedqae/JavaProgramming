@@ -28,7 +28,6 @@ public class GenerateRandomNumber {
         System.out.println("------range------------");
         System.out.println("random int: " + random.nextInt(0, 100)); // range 0 to 100
         System.out.println("ThreadLocalRandom int: " + ThreadLocalRandom.current().nextInt(0, 100)); // range 0 to 100
-
     }
 
 }
