@@ -3,7 +3,7 @@ package matrix;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CreateMatrix {
+public class CreateMatrixThroughTerminal {
 
     @SuppressWarnings("resource")
     public static void main(String[] args) {
@@ -20,30 +20,10 @@ public class CreateMatrix {
         System.out.println("Please enter the matrix data: ");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
+                System.out.println("Row:" + i + " Column:" + j);
                 matrix[i][j] = scanner.nextInt();
             }
         }
-
-        // print the matrix with for loop
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                System.out.print(matrix[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        // print the matrix with forEach loop
-        for (int[] arr : matrix) {
-            for (int ele : arr) {
-                System.out.print(ele + " ");
-            }
-            System.out.println();
-        }
-
-        // print the matrix with forEach loop
-        for (int[] arr : matrix) {
-            System.out.println(Arrays.toString(arr));
-        }
+        System.out.println(Arrays.deepToString(matrix));
     }
-
 }

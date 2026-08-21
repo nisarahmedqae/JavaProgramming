@@ -1,62 +1,46 @@
 package matrix;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class AdditionMatrix {
 
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter total rows: ");
-        int rows = scanner.nextInt();
+        int[][] matrix1 = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
 
-        System.out.println("Enter total columns: ");
-        int cols = scanner.nextInt();
-
-        // 2D Array
-        int matrix1[][] = new int[rows][cols];
-        int matrix2[][] = new int[rows][cols];
-        int sum[][] = new int[rows][cols];
-
-        System.out.println("Please enter the matrix 1 data: ");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix1[i][j] = scanner.nextInt();
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1[i].length; j++) {
+                System.out.print(matrix1[i][j] + " ");
             }
+            System.out.println(); // move to next line after each row
         }
 
-        System.out.println("Please enter the matrix 2 data: ");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix2[i][j] = scanner.nextInt();
-            }
-        }
+        int[][] matrix2 = {
+                {10, 17, 13},
+                {15, 11, 16},
+                {14, 18, 12}
+        };
 
-        System.out.println("Print matrix 1 data: ");
-        for (int[] arr : matrix1) {
-            System.out.println(Arrays.toString(arr));
-        }
-
-        System.out.println("Print matrix 2 data: ");
-        for (int[] arr : matrix2) {
-            System.out.println(Arrays.toString(arr));
-        }
+        int row = matrix1.length;
+        int col = matrix1[0].length;
+        int[][] add = new int[row][col];
+        int[][] sub = new int[row][col];
 
         System.out.println("Sum of two matrix: ");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                sum[i][j] = matrix1[i][j] + matrix2[i][j];
-                System.out.print(sum[i][j] + " ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                add[i][j] = matrix1[i][j] + matrix2[i][j];
+                System.out.print(add[i][j] + " ");
             }
             System.out.println();
         }
 
         System.out.println("Subtraction of two matrix: ");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                sum[i][j] = matrix1[i][j] - matrix2[i][j];
-                System.out.print(sum[i][j] + " ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                sub[i][j] = matrix1[i][j] - matrix2[i][j];
+                System.out.print(sub[i][j] + " ");
             }
             System.out.println();
         }
