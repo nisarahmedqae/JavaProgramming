@@ -2,11 +2,10 @@ package questions;
 
 public class NullArgument {
 
+    /*
+     * pass null argument with method overloading with string and object types
+     */
     public static void main(String[] args) {
-        /*
-         * pass null argument with method overloading with string and object types
-         */
-
         test(null); // it will print String Argument
         // Although Object is super class of String
         // But string is most obvious choice so compiler will print String
