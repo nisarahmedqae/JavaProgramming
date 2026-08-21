@@ -15,8 +15,8 @@ public class ReverseNumber {
 		System.out.println("----------------------------");
 
 		int num2 = 12345;
-		StringBuffer sb = new StringBuffer(String.valueOf(num2));
-		StringBuffer revSb = sb.reverse();
+		StringBuilder sb = new StringBuilder(String.valueOf(num2));
+		StringBuilder revSb = sb.reverse();
 		System.out.println(revSb);
 
 		System.out.println("----------------------------");

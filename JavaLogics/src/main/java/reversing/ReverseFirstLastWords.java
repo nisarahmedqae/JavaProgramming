@@ -5,27 +5,28 @@ public class ReverseFirstLastWords {
     public static void main(String[] args) {
 
         String str = "    my name is gaurav             ";
-        String[] arr = str.trim().split(" ");
+        String[] words = str.trim().split(" ");
         int firstIndex = 0;
-        int lastIndex = arr.length - 1;
+        int lastIndex = words.length - 1;
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < arr.length; i++) {
-            String ele = arr[i];
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+
             if (i == firstIndex || i == lastIndex) {
-                char[] charArr = ele.toCharArray();
-                String blank = "";
+                char[] charArr = word.toCharArray();
+                StringBuilder reversedWord = new StringBuilder();
                 for (int j = charArr.length - 1; j >= 0; j--) {
-                    blank = blank + charArr[j];
+                    reversedWord.append(charArr[j]);
                 }
-                sb.append(blank + " ");
-                continue;
+                result.append(reversedWord).append(" ");
+            } else {
+                result.append(word).append(" ");
             }
-            sb.append(ele + " ");
         }
-        System.out.println(sb);
 
+        System.out.println(result.toString().trim());
     }
 
 }

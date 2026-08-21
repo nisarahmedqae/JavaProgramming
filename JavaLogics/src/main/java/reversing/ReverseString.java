@@ -7,23 +7,22 @@ public class ReverseString {
 
 		// Approach 1
 		String str = "madam";
-		String temp = "";
-
 		char[] ch = str.toCharArray();
+		StringBuilder sb = new StringBuilder();
 
 		for (int i = ch.length - 1; i >= 0; i--) {
-			temp = temp + ch[i];
+			sb.append(ch[i]);
 		}
-		System.out.println(temp);
+		System.out.println(sb);
 
-		if (str.equals(temp)) {
+		if (str.equals(sb.toString())) {
 			System.out.println("String is Palindrome");
 		}
 
 		// Approach 2
 		String str2 = "madam";
-		StringBuffer sb = new StringBuffer(str2);
-		StringBuffer revSb = sb.reverse();
+		StringBuffer sb2= new StringBuffer(str2);
+		StringBuffer revSb = sb2.reverse();
 		System.out.println(revSb);
 	}
 
