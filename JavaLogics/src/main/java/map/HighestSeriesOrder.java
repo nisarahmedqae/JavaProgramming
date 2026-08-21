@@ -11,28 +11,27 @@ public class HighestSeriesOrder {
         int[] arr = {1, 2, 3, 15, 4, 6, 7, 8, 9, 10, 12, 99};
 
         Map<Integer, List<Integer>> map = new HashMap<>();
-        int count = 1;
+        int key = 1;
 
         for (int i = 0; i < arr.length - 1; i++) {
-            map.putIfAbsent(count, new ArrayList<>());
+            map.putIfAbsent(key, new ArrayList<>());
             if (arr[i] + 1 == arr[i + 1]) {
-                map.get(count).add(arr[i]);
+                map.get(key).add(arr[i]);
             } else {
-                map.get(count).add(arr[i]);
-                count++;
+                map.get(key).add(arr[i]);
+                key++;
             }
         }
-
         System.out.println(map);
 
-        int key = 0;
+        int maxKey = 0;
         for (int ele : map.keySet()) {
             int len = map.get(ele).size();
-            if (len > key) {
-                key = ele;
+            if (len > maxKey) {
+                maxKey = ele;
             }
         }
 
-        System.out.println(map.get(key));
+        System.out.println(map.get(maxKey));
     }
 }

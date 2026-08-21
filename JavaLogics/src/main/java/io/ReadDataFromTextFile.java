@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.Scanner;
 
 public class ReadDataFromTextFile {
@@ -11,26 +14,15 @@ public class ReadDataFromTextFile {
     @SuppressWarnings("resource")
     public static void main(String[] args) throws IOException {
 
-        // Approach 1
-        String systemPath = System.getProperty("user.dir");
-        FileReader fileReader = new FileReader(systemPath + "\\src\\main\\java\\io\\ReadFile.txt");
+        // Build path relative to project root (works on any OS)
+        Path path = Path.of(System.getProperty("user.dir")
+                , "JavaLogics", "src", "main", "java", "io", "ReadFile.txt");
 
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String currLine = bufferedReader.readLine().trim(); // remove before and after space from line
+        String strContent = Files.readString(path);
+        System.out.println(strContent);
 
-        while (currLine != null) {
-            System.out.println(currLine);
-            currLine = bufferedReader.readLine();
-        }
-        bufferedReader.close();
-
-        // Approach 2
-        File file = new File(systemPath + "\\src\\main\\java\\io\\ReadFile.txt");
-        Scanner scanner = new Scanner(file);
-
-        while (scanner.hasNextLine()) {
-            System.out.println(scanner.nextLine());
-        }
+        List<String> listContent = Files.readAllLines(path);
+        System.out.println(listContent);
 
     }
 

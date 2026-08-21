@@ -1,14 +1,17 @@
 package map;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class AlphanumericPairExpander {
 
     public static void main(String[] args) {
-        String str = "a1b2c3d0f1e1";
+        String str = "a1b2c3d0f4e6";
         char[] arr = str.toCharArray();
-        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+        System.out.println(Arrays.toString(arr));
+
+        Map<Character, Integer> map = new LinkedHashMap<>();
 
         for (int i = 0; i < arr.length - 1; i++) {
             char key = arr[i];
@@ -18,14 +21,14 @@ public class AlphanumericPairExpander {
         }
         System.out.println(map);
 
-        String blank = "";
+        StringBuilder sb = new StringBuilder();
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             int count = entry.getValue();
             for (int i = 0; i < count; i++) {
-                blank = blank + entry.getKey();
+                sb.append(entry.getKey());
             }
         }
-        System.out.println(blank);
+        System.out.println(sb);
     }
 }
 
