@@ -4,10 +4,9 @@ public class PalindromeNumber {
 
     public static void main(String[] args) {
         int num = 16461;
-        int revNum = 0;
-
         char[] arr = String.valueOf(num).toCharArray();
 
+        int revNum = 0;
         for (int i = arr.length - 1; i >= 0; i--) {
             int digit = arr[i] - '0';
             revNum = revNum * 10 + digit;
