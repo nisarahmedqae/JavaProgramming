@@ -13,7 +13,7 @@ public class ArmstrongNumber {
         int power = String.valueOf(num).length();
         int sum = 0;
 
-        for (int ele : String.valueOf(num).toCharArray()) {
+        for (char ele : String.valueOf(num).toCharArray()) {
             int factor = 1;
             for (int i = 0; i < power; i++) {
                 factor = factor * Character.getNumericValue(ele);

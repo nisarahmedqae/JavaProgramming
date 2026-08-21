@@ -4,35 +4,35 @@ public class LeaderElements {
 
 	// find out all the leader elements in a given array
 
-	public static void findLeaders(int[] num) {
-		if (num.length == 0) {
+	public static void findLeaders(int[] arr) {
+		if (arr.length == 0) {
 			return;
 		}
 
-		int max = num[num.length - 1];
+		int max = arr[arr.length - 1];
 		System.out.print(max + " ");
 
-		for (int i = num.length - 2; i >= 0; i--) {
-			if (num[i] > max) {
-				System.out.print(num[i] + " ");
-				max = num[i];
+		for (int i = arr.length - 2; i >= 0; i--) {
+			if (arr[i] > max) {
+				max = arr[i];
+				System.out.print(max + " ");
 			}
 		}
-		System.out.println("");
+		System.out.println();
 	}
 
 	public static void main(String[] args) {
-		int[] num = { 92, 7, 12, 9, 8, 3 };
-		findLeaders(num);
+		int[] arr = { 92, 7, 12, 9, 8, 3 };
+		findLeaders(arr);
 
-		int[] num1 = { 92, 11, 10, 9, 8, 14 };
-		findLeaders(num1);
+		int[] arr1 = { 92, 11, 10, 9, 8, 14 };
+		findLeaders(arr1);
 
-		int[] num3 = { 92, 11, 10, 9, 8, 14, 3, 3 };
-		findLeaders(num3);
+		int[] arr2 = { 92, 11, 10, 9, 8, 14, 3, 3 };
+		findLeaders(arr2);
 
-		int[] num4 = {};
-		findLeaders(num4);
+		int[] arr3 = {};
+		findLeaders(arr3);
 	}
 
 }

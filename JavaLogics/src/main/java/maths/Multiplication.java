@@ -11,10 +11,10 @@ public class Multiplication {
         int b = 10;
         int sum = 0;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < b; i++) {
             sum = sum + a;
         }
-        System.out.println("Multiplication of 5*10= " + sum + "");
+        System.out.println("Multiplication of 5*10= " + sum);
     }
 
 }
