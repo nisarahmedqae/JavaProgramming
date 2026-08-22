@@ -18,6 +18,7 @@ public class HMForEachLoop {
         for (Map.Entry<Integer, String> entry : entryForEach) {
             Integer key = entry.getKey();
             String value = entry.getValue();
+            System.out.println(entry);
             System.out.println(key + " : " + value);
         }
 
