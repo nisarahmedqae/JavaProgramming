@@ -1,26 +1,24 @@
 package string;
 
+import java.util.Arrays;
+import java.util.regex.Pattern;
+
 public class FindSubString {
 
-	public static void main(String[] args) {
-		// check if substring is present in a given string
+    public static void main(String[] args) {
+        // check if substring is present in a given string
 
-		String mainString = "Hello, World!";
-		String substring = "World";
+        String str = "The quick! brown fox jumps over the lazy dog";
+        String wordToFind = "quick";
 
-		// 1. Using contains() method:
-		if (mainString.contains(substring)) {
-			System.out.println("Substring found.");
-		} else {
-			System.out.println("Substring not found.");
-		}
+        String[] words = str.split("[ ]+");
+        boolean foundViaList = Arrays.asList(words).contains(wordToFind);
+        System.out.println("Found (list): " + foundViaList); //false
 
-		// 2. Using indexOf() method:
-		if (mainString.indexOf(substring) != -1) {
-			System.out.println("Substring found.");
-		} else {
-			System.out.println("Substring not found.");
-		}
-	}
+        Pattern pattern = Pattern.compile("\\b" + Pattern.quote(wordToFind) + "\\b");
+        boolean foundViaRegex = pattern.matcher(str).find();
+        System.out.println("Found (regex): " + foundViaRegex); //true
+
+    }
 
 }

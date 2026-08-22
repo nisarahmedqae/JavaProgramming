@@ -10,9 +10,7 @@ public class StringLength {
 
 		System.out.println(str.length()); //length method
 		
-		System.out.println(str.toCharArray().length); //length variable
 		System.out.println(str.lastIndexOf(""));
-		System.out.println(str.split("").length);
 
 		int count = 0;
 		for (char ch : str.toCharArray()) {

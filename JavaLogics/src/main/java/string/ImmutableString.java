@@ -3,8 +3,7 @@ package string;
 public class ImmutableString {
 
     public static void main(String[] args) {
-        // String literal will point to original string which is stored in memory if
-        // value is same
+        // String literal will point to original string which is stored in memory is value is same
 
         String a = "hello"; // string literal
         String b = "hello";
@@ -24,9 +23,12 @@ public class ImmutableString {
         System.out.println(a.equals(b)); // true bcoz content is same
         System.out.println(a == b); // true bcoz memory of string literal is same
         System.out.println(a.equals(s)); // true bcoz equals function checks for content
-        System.out.println(a == s); // fail matching the memory references
-        System.out.println(s == s1); // fail bcoz memory references are different as they are defined with string class
+        System.out.println(a == s); // false matching the memory references
+        System.out.println(s == s1); // false bcoz memory references are different as they are defined with string class
+        System.out.println(a == c); // false — c is a new object on the heap from concat(), not in the string pool, and content also differs
 
+        String s2 = s.intern(); // forces "hello" to resolve to the pooled reference
+        System.out.println(a == s2); // true — s2 now points to the same pooled "hello" as a
     }
 
 }
