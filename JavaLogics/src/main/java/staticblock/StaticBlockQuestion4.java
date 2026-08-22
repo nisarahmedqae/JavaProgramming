@@ -2,26 +2,27 @@ package staticblock;
 
 public class StaticBlockQuestion4 {
 
-	/*
-	 * Q4. How can we create objects if we make the constructor private?
-	 */
+    /*
+     * Q7. what will be output of following class?
+     */
 
-	int age;
+    static {
+        System.out.println("Static Block");
+    }
 
-	public static int createObject() {
-		StaticBlockQuestion4 obj1 = new StaticBlockQuestion4();
-		obj1.age = 40;
-		return obj1.age;
-	}
+    //Below two will only be called after creating object of class
+    {
+        System.out.println("Instance Initialization Block");
+    }
 
-	private StaticBlockQuestion4() {
-		age = 30;
-	}
+    StaticBlockQuestion4() {
+        System.out.println("Constructor");
+    }
 
-	public static void main(String[] args) {
-
-		StaticBlockQuestion4 obj = new StaticBlockQuestion4();
-		System.out.println(obj.age);
-	}
-
+    public static void main(String[] args) {
+        System.out.println("Main Method");
+        new StaticBlockQuestion4();
+        // first preference will be given to Instance Initialization Block before constructor
+        new StaticBlockQuestion4();
+    }
 }
