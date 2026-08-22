@@ -4,26 +4,19 @@ import java.util.Arrays;
 
 public class SortDigitsWithMethod {
 
-	public static void main(String[] args) {
-		int num = 15628469;
+    public static void main(String[] args) {
+        int num = 15628469;
 
-		// Convert the number to a string to make it easier to work with individual
-		// digits
-		String numString = Integer.toString(num);
+        char[] digits = String.valueOf(num).toCharArray();
+        Arrays.sort(digits);
 
-		// Convert the string to a character array
-		char[] digits = numString.toCharArray();
+        // Reconstruct the sorted number from the sorted array of digits
+        String sortedNumString = new String(digits);
+        long sortedNum = Long.parseLong(sortedNumString);
 
-		// Sort the array of digits
-		Arrays.sort(digits);
+        System.out.println("Original number: " + num);
+        System.out.println("Sorted number: " + sortedNum);
 
-		// Reconstruct the sorted number from the sorted array of digits
-		String sortedNumString = new String(digits);
-		int sortedNum = Integer.parseInt(sortedNumString);
-
-		System.out.println("Original number: " + num);
-		System.out.println("Sorted number: " + sortedNum);
-
-	}
+    }
 
 }

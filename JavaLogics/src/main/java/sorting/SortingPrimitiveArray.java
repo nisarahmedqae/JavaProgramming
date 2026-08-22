@@ -9,7 +9,7 @@ public class SortingPrimitiveArray {
         int[] primitiveArr = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
 
         // Convert primitive int array to Integer array using autoboxing
-        // Then Sort thr int Array
+        // Then Sort thr Integer Array
         Integer[] sortedNonPrimitiveArr = Arrays.stream(primitiveArr).boxed().sorted(Comparator.reverseOrder())
                 .toArray(Integer[]::new);
         System.out.println(Arrays.toString(sortedNonPrimitiveArr));

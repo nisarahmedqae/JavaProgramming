@@ -2,7 +2,7 @@ package sorting;
 
 import java.util.*;
 
-public class SortMapKeysUsingCollections {
+public class SortMapValuesUsingCollections {
 
     public static void main(String[] args) {
         // Creating a HashMap with key-value pairs
@@ -15,15 +15,15 @@ public class SortMapKeysUsingCollections {
         List<Map.Entry<Integer, String>> mapList = new ArrayList<>(map.entrySet());
         System.out.println(mapList); //[1=nisar, 2=middle, 3=ahmed]
 
-        // Sort by keys in Descending Order
-        mapList.sort(Map.Entry.comparingByKey(Comparator.reverseOrder()));
-        System.out.println(mapList); //[3=ahmed, 2=middle, 1=nisar]
+        // Sort by values in Descending Order
+        mapList.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+        System.out.println(mapList); //[1=nisar, 2=middle, 3=ahmed]
 
         // Store sorted List into LinkedHashMap
         Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
         for (var ele : mapList) {
             linkedHashMap.put(ele.getKey(), ele.getValue());
         }
-        System.out.println(linkedHashMap); //{3=ahmed, 2=middle, 1=nisar}
+        System.out.println(linkedHashMap); //{1=nisar, 2=middle, 3=ahmed}
     }
 }

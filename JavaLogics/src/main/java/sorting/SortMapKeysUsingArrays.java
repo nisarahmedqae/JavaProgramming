@@ -4,6 +4,7 @@ import java.util.*;
 
 public class SortMapKeysUsingArrays {
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         // Creating a HashMap with key-value pairs
         Map<Integer, String> map = new HashMap<>();
@@ -20,7 +21,7 @@ public class SortMapKeysUsingArrays {
         System.out.println(Arrays.toString(mapArr)); //[3=ahmed, 2=middle, 1=nisar]
 
         // Store sorted Array into LinkedHashMap
-        LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<>();
+        Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
         for (var ele : mapArr) {
             linkedHashMap.put(ele.getKey(), ele.getValue());
         }
