@@ -8,6 +8,21 @@ public class ConcatenateArrays {
 
 	public static void main(String[] args) {
 
+		// Concatenate two int arrays using stream
+		int[] intArray1 = { 5, 6 };
+		int[] intArray2 = { 7, 8 };
+
+		int[] finalIntArray = IntStream.concat(Arrays.stream(intArray1), Arrays.stream(intArray2)).toArray();
+		System.out.println(Arrays.toString(finalIntArray));
+
+		// Concatenate two Integer arrays using stream
+		Integer[] integerArray1 = { 1, 2 };
+		Integer[] integerArray2 = { 3, 4 };
+
+		Integer[] finalIntegerArray = Stream.concat(Arrays.stream(integerArray1), Arrays.stream(integerArray2))
+				.toArray(Integer[]::new);
+		System.out.println(Arrays.toString(finalIntegerArray));
+
 		// Concatenate two string arrays using stream
 		String[] strArray1 = { "Hello", "World" };
 		String[] strArray2 = { "Java", "Selenium" };
@@ -16,22 +31,6 @@ public class ConcatenateArrays {
 				.toArray(String[]::new);
 		System.out.println(Arrays.toString(finalStrArray));
 
-		// Concatenate two Integer arrays using stream
-		Integer[] integerArray1 = { 1, 2 };
-		Integer[] integerArray2 = { 3, 4 };
-
-		Integer[] finalIntegerArray = Stream.concat(Arrays.stream(integerArray1), Arrays.stream(integerArray2))
-				.toArray(Integer[]::new);
-
-		System.out.println(Arrays.toString(finalIntegerArray));
-
-		// Concatenate two int arrays using stream
-		int[] intArray1 = { 5, 6 };
-		int[] intArray2 = { 7, 8 };
-
-		int[] finalIntArray = IntStream.concat(Arrays.stream(intArray1), Arrays.stream(intArray2)).toArray();
-
-		System.out.println(Arrays.toString(finalIntArray));
 	}
 
 }

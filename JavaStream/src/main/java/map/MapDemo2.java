@@ -9,7 +9,7 @@ public class MapDemo2 {
 	public static void main(String[] args) {
 		List<Integer> numbersList = Arrays.asList(10, 30, 5, 20);
 		List<Integer> result = numbersList.stream().map(num -> num * 3).collect(Collectors.toList());
-		result.forEach(n -> System.out.println(n));
+		System.out.println(result);
 	}
 
 }

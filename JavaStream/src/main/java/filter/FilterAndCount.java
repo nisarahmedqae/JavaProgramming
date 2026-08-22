@@ -1,11 +1,12 @@
 package filter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FilterAndCount {
 
     public static void main(String[] args) {
-        ArrayList<String> names = new ArrayList<>();
+        List<String> names = new ArrayList<>();
         names.add("Abhijeet");
         names.add("Don");
         names.add("Alekhya");
